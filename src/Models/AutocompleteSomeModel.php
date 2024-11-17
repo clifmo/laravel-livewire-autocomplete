@@ -2,14 +2,14 @@
 
 namespace App\Livewire;
 
-use App\Models\County;
+use App\Models\SomeModel;
 use Livewire\Component;
 
-class AutocompleteCounty extends Autocomplete
+class AutocompleteSomeModel extends Autocomplete
 {
 
     public function query()
     {
-        return County::where('name', 'like', '%'.$this->search.'%');
+        return SomeModel::where('name', 'like', '%'.$this->search.'%');
     }
 }
